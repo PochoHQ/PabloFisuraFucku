@@ -1,1 +1,81 @@
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intenta Hackearme - Challenge</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./modal.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💀</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">💀 INTENTA HACKEARME</h1>
+            <p class="subtitle">🎯 Zona de Testing Ético - ¿Puedes encontrar las vulnerabilidades?</p>
+        </header>
+
+        <section class="info-section">
+            <h2>🔍 Tu Información</h2>
+            <div id="client-info" class="info-container">
+                <div class="loading">🔄 Analizando tu conexión...</div>
+            </div>
+        </section>
+
+        <section class="login-section">
+            <h2>🔒 Panel de Administración</h2>
+            <form id="login-form" class="login-form">
+                <input type="text" placeholder="Usuario" required>
+                <input type="password" placeholder="Contraseña" required>
+                <button type="submit">🚀 Intentar Acceso</button>
+            </form>
+            <div id="login-result" class="login-result"></div>
+        </section>
+
+        <section class="challenges-section">
+            <h2>🎮 Desafíos de Testing</h2>
+            <div class="challenges-grid">
+                <div class="challenge-card" onclick="showChallenge('sql')">
+                    <h3>💉 SQL Injection</h3>
+                    <p>Fácil</p>
+                </div>
+                <div class="challenge-card" onclick="showChallenge('xss')">
+                    <h3>&lt;/&gt; XSS Attack</h3>
+                    <p>Medio</p>
+                </div>
+                <div class="challenge-card" onclick="showChallenge('admin')">
+                    <h3>🛡️ Admin Panel</h3>
+                    <p>Difícil</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-section">
+            <h2>📊 Estadísticas</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">1337</span>
+                    <span class="stat-label">Intentos de Hack</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">42</span>
+                    <span class="stat-label">Vulnerabilidades</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">99.9%</span>
+                    <span class="stat-label">Seguridad</span>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>⚠️ Esta es una aplicación de testing ético - No hay datos reales conectados</p>
+            <p>🛡️ Desarrollado para práctica de seguridad</p>
+        </footer>
+    </div>
+
+    <script src="./script.js"></script>
+    <script src="./cookieModal.js"></script>
+</body>
+</html>
